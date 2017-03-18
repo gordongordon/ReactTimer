@@ -5,7 +5,7 @@ var Navigation = (props) => {
   return (
     <div className="top-bar">
       <div className="top-bar-left">
-                <ul className="menu" data-dropdown-menu>
+                <ul className="menu" data-menu>
           <li className="menu-text">React Timer App</li>
           <li>
               <IndexLink to="/" activeClassName="active-link"  activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
@@ -17,7 +17,7 @@ var Navigation = (props) => {
       </div>
       <div className="top-bar-right">
         <ul className="menu">
-          <li>Created by <a href="http://www.mead.io" target="_blank">Gordon</a></li>
+          <li className="menu-text">Created by <a href="http://www.mead.io" target="_blank">Gordon</a></li>
         </ul>
       </div>
     </div>
