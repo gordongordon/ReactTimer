@@ -9,7 +9,21 @@ var Clock = require('Clock');
 describe( 'Clock', () => {
     it('should exist', () => {
       expect(Clock).toExist();
-    })
+    });
+
+
+
+    describe('render', () => {
+      it('shoud render clock to output', ()=> {
+        // Testing Racct Component 
+        var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={62}/>);
+        var $el = $(ReactDOM.findDOMNode(clock));
+        var actualText = $el.find('.clock-text').text();
+
+        expect( actualText).toBe('01:02');
+      });
+    });
+
 
     describe('formatSeconds', () => {
       it('shoud format seconds', () => {
@@ -21,7 +35,7 @@ describe( 'Clock', () => {
         expect(actual).toBeA('string');
         expect(actual).toBe(expected);
 
-      })
+      });
 
       it('shoud format seconds when min/sec are less than 10', () => {
         var clock = TestUtils.renderIntoDocument(<Clock/>);
@@ -32,6 +46,6 @@ describe( 'Clock', () => {
         expect(actual).toBeA('string');
         expect(actual).toBe(expected);
 
-      })
-    });
+      });
+        });
 });
