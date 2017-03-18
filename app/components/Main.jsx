@@ -6,11 +6,8 @@ var Main = (props) => {
     <div>
       <Navigation/>
       <div>
-        <div>
-
-          <p>Main.jsx Rendered</p>
-            {props.children}
-        </div>
+        <p>Main.jsx Rendered</p>
+        {props.children}
       </div>
     </div>
   );
